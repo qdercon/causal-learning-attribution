@@ -1,0 +1,424 @@
+/*
+ * Misc CSS styling for consent form and jsPsych questionnaires.
+ *
+ */
+
+/* font setup */
+
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+/* Container holding consent form */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .row {width: 100%;}
+  .col-3 {
+    width: 25%;
+    float: left;
+    padding: 15px;
+    border: none;
+  }
+  .col-6 {
+    width: 50%;
+    float: left;
+    padding: 15px;
+    border: none;
+    background-color: aliceblue;
+  }
+
+  input[type=submit] {
+    font-size: 18px; 
+    font-weight: 500;
+    padding: 5px 15px; 
+    background: powderblue; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px;
+    border: 3px solid; 
+    border-color: darkgray; 
+    cursor: pointer;
+  }
+
+  input[type=checkbox] {
+    -ms-transform: scale(1.4); /* IE */
+    -moz-transform: scale(1.4); /* FF */
+    -webkit-transform: scale(1.4); /* Safari and Chrome */
+    -o-transform: scale(1.4); /* Opera */
+    transform: scale(1.4);
+    padding: 10px;
+  }
+  
+#consent-container {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6em;
+}
+#consent-container h2 {
+  text-align: center;
+  line-height: 1.6em;
+}
+
+/* Container holding jsPsych content */
+.jspsych-display-element {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: aliceblue;
+}
+
+.jspsych-display-element:focus {
+  outline: none;
+}
+
+.jspsych-content-wrapper {
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+
+.jspsych-content { /* essentially controls instruction size */
+  max-width: 80vw;
+  text-align: center;
+  margin: auto; /* this is for overflowing content */
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  line-height: 3rem;
+}
+
+.instr-box {
+  float: left;
+  inline-size: 350px;
+  overflow-wrap: break-word;
+  }
+
+.jspsych-top {
+  align-items: flex-start;
+}
+
+.jspsych-middle {
+  align-items: center;
+}
+
+/* fonts and type */
+.jspsych-display-element {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+/* Form elements like input fields and buttons */
+.jspsych-display-element input[type="text"] {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+.jspsych-html-button-response-button {
+  margin: 0.1em 0.5em 0.1em 0.5em;
+}
+
+.jspsych-btn-group {
+  line-height: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+/* borrowing Bootstrap style for btn elements, but combining styles a bit */
+.jspsych-btn {
+  padding: 6px 12px;
+  margin-bottom: 2em;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.5rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.jspsych-btn:hover {
+  background-color: #ddd;
+  border-color: #aaa;
+}
+
+.jspsych-btn:disabled {
+  background-color: #eee;
+  color: #aaa;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+#stimulus {
+  font-size: 1.1rem;
+}
+
+/* jsPsych likert scale */
+.jspsych-survey-likert-preamble {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: slategrey;
+}
+
+.jspsych-survey-likert-statement {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+  margin: 0 0 2rem 0 !important;
+  color: #005F84 !important;
+}
+
+.jspsych-survey-likert-opt-label {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  margin: 1rem auto 1rem auto;
+}
+
+/* surveyjs styling */
+.sd-error {
+  font-size:1.1rem;
+  margin: auto 0 -2rem 0;
+  text-align: center;
+  color: red;
+}
+.sd-question__required-text {
+  display: none;
+}
+.jspsych-nav-complete {
+  color: #1c96c5;
+}
+
+.sd-action-bar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.sd-root-modern {
+  background-color: inherit !important;
+}
+
+.jspsych-page textarea {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 1rem;
+  width: 50vw;
+}
+
+
+/*css thought bubble based on code by grant (https://codepen.io/quadbaup/pen/rKOKQv)*/
+.thought {
+  --bubble-bg: #fff;
+  --bubble-shadow: 6px 5px 18px #b3c6c6;
+  --bubble-border: 1.5px solid rgba(179,198,198,0.5);
+  background: linear-gradient(135deg, #fff 70%, #e6f7ff 100%);
+  padding: 15px;
+  border-radius: 30px;
+  min-width: 40px;
+  max-width: 220px;
+  min-height: 40px;
+  margin: 1rem 4rem 3rem 2rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  box-shadow:
+    0 8px 24px 0 rgba(0,0,0,0.10),
+    var(--bubble-shadow);
+  border: var(--bubble-border);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  z-index: 1;
+}
+
+.thought:before,
+.thought:after {
+  content: "";
+  background-color: var(--bubble-bg);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  border: var(--bubble-border);
+  opacity: 0.7;
+  box-shadow: 0 5px 12px 1px #b3c6c6;
+  bottom: -22px;
+  right: -24px;
+  width: 32px;
+  height: 32px;
+  z-index: -1;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.thought:before {
+  content: "";
+  background-color: var(--bubble-bg);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border: var(--bubble-border);
+  opacity: 0.7;
+  box-shadow:
+    20px 14px 1px -6px #fff,
+    36px 20px 1px -10px #fff,
+    0 5px 12px 1px #b3c6c6;
+  bottom: -39px;
+  right: -41px;
+  width: 24px;
+  height: 24px;
+  z-index: -1;
+}
+
+/* On hover, update the variable so all parts match */
+.thought:hover:not(.responded):not(.disabled-choice) {
+  background: lightskyblue;
+  cursor: pointer;
+  transform: translateY(-6px) scale(1.04);
+}
+
+/* Responded state */
+.jspsych-btn-group.responded .thought:hover {
+    transform: none;
+    cursor: not-allowed;
+}
+.thought.responded {
+  background: lightskyblue !important;
+  border:2px solid #000;
+  cursor: not-allowed;
+}
+
+.thought.correct-choice {
+    background: #50C878 !important; /* Green */
+    color: white !important;
+}
+
+.thought.incorrect-choice {
+    background: #FF3232 !important; /* Red */
+    color: white !important;
+}
+
+.thought.disabled-choice {
+    background: white !important;
+    color: #cdcdcd !important;
+    border-color: #ccc !important;
+    cursor: not-allowed;
+}
+
+/*little box to put thought*/
+#click-box-container {
+    width: 500px;
+    height: 400px;
+    border: 0.5px grey solid;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+}
+#grid-overlay-vertical {
+  width: 5px;
+  height: 400px;
+  margin: 0 250px 0 250px;
+  background-color: salmon;
+  opacity: 40%; 
+  position: absolute;
+}
+#grid-overlay-horizontal {
+  width: 500px;
+  height: 5px;
+  margin: 197.5px 0 197.5px 0;
+  background-color: salmon;
+  opacity: 40%; 
+  position: absolute;
+}
+#click-position-thing {
+    left: 50px;
+    top: 50px;
+    width: 40px;
+    position: absolute;
+    transition: left .25s ease-in, top .25s ease-in;
+}
+
+/*misc styling for intervention examples*/
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  /*quotes: "\201C""\201D""\2018""\2019";*/
+}
+blockquote:before {
+  color: #ccc;
+  /*  content: open-quote;*/
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  }
+  blockquote p {
+  display: inline;
+}
+
+.float-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+}
+
+.float-child {
+  float:left;
+  text-align: center;
+  margin-right: 10px;
+} 
+
+/* jsPsych progress bar
+#jspsych-progressbar-container {
+  color: #555;
+  border-bottom: 1px solid #dedede;
+  background-color: #f9f9f9;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 8px 0px;
+  width: 100%;
+  line-height: 1em;
+}
+#jspsych-progressbar-container span {
+  font-size: 14px;
+  padding-right: 14px;
+}
+#jspsych-progressbar-outer {
+  background-color: #eee;
+  width: 75%;
+  margin: auto;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+#jspsych-progressbar-inner {
+  background-color: #aaa;
+  width: 0%;
+  height: 100%;
+} */
+
+/* Control appearance of jsPsych.data.displayData() */
+#jspsych-data-display {
+  text-align: left;
+}

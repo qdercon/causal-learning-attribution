@@ -1,0 +1,34 @@
+data/**/*.txt
+# raw data carry prolific ids: only the pseudonymised copies are published. the id key and
+# the script that builds it (analyses/scramble_ids.R) stay local
+data/**/*.csv
+!data/**/*_scrambled.csv
+analyses/scramble_ids.R
+
+# firebase: admin sdk keys (*.json below), project config
+public/.firebaserc
+.DS_Store
+.venv/
+.vscode/
+*.Rmd
+prev/
+*.json
+.claude
+analyses/outputs
+CLAUDE.md
+.lintr
+
+# stan models: keep only the current family's .stan sources tracked; fits/binaries/
+# superseded models (analyses/stan-models/deprecated/) stay on disk but untracked
+analyses/stan-fits/
+analyses/stan-models/**
+!analyses/stan-models/*.stan
+data/all_self_reports.csv
+
+# old EDA/QC notebooks + participant id lists (PII): kept locally, not tracked
+analyses/notebooks/
+analyses/id_lists/
+__pycache__/
+
+# local-only analysis notes (design rationale moved out of code comments)
+analyses/NOTES.md
